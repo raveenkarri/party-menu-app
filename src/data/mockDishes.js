@@ -20,7 +20,7 @@ const dishes = [
     id: 2,
     name: "Kadhai Paneer 2",
     mealType: "MAIN COURSE",
-    type: "Non Veg",
+    type: "Veg",
     description: "A spicy and flavorful paneer dish cooked with bell peppers, onions, and special kadhai masala.",
     ingredients: [
       { name: "Paneer", quantity: "250g" },
@@ -50,7 +50,7 @@ const dishes = [
     id: 4,
     name: "Kadhai Paneer 4",
     mealType: "SIDES",
-    type: "Non Veg",
+    type: "Veg",
     description: "A spicy and flavorful paneer dish cooked with bell peppers, onions, and special kadhai masala.",
     ingredients: [
       { name: "Paneer", quantity: "220g" },
@@ -65,7 +65,7 @@ const dishes = [
     id: 5,
     name: "Kadhai Paneer 5",
     mealType: "STARTER",
-    type: "Veg",
+    type: "Non Veg",
     description: "A spicy and flavorful paneer dish cooked with bell peppers, onions, and special kadhai masala.",
     ingredients: [
       { name: "Paneer", quantity: "180g" },
@@ -95,7 +95,7 @@ const dishes = [
     id: 7,
     name: "Kadhai Paneer 7",
     mealType: "DESSERT",
-    type: "Veg",
+    type: "Non Veg",
     description: "A sweet variation of paneer with mild spices.",
     ingredients: [
       { name: "Paneer", quantity: "200g" },
@@ -140,7 +140,7 @@ const dishes = [
     id: 10,
     name: "Kadhai Paneer 10",
     mealType: "MAIN COURSE",
-    type: "Non Veg",
+    type: "Veg",
     description: "Paneer main course dish with aromatic spices.",
     ingredients: [
       { name: "Paneer", quantity: "250g" },
@@ -170,7 +170,7 @@ const dishes = [
     id: 12,
     name: "Kadhai Paneer 12",
     mealType: "SIDES",
-    type: "Non Veg",
+    type: "Veg",
     description: "Rich paneer side dish for main courses.",
     ingredients: [
       { name: "Paneer", quantity: "220g" },
@@ -185,7 +185,7 @@ const dishes = [
     id: 13,
     name: "Kadhai Paneer 13",
     mealType: "STARTER",
-    type: "Veg",
+    type: "Non Veg",
     description: "Spicy paneer starter with bell peppers.",
     ingredients: [
       { name: "Paneer", quantity: "180g" },
@@ -215,7 +215,7 @@ const dishes = [
     id: 15,
     name: "Kadhai Paneer 15",
     mealType: "DESSERT",
-    type: "Veg",
+    type: "Non Veg",
     description: "Delightful paneer dessert for the sweet tooth.",
     ingredients: [
       { name: "Paneer", quantity: "200g" },
@@ -226,7 +226,7 @@ const dishes = [
     ],
     image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
   },
-  // Dishes 16–30
+
   {
     id: 16,
     name: "Kadhai Paneer 16",
@@ -261,7 +261,7 @@ const dishes = [
     id: 18,
     name: "Kadhai Paneer 18",
     mealType: "MAIN COURSE",
-    type: "Non Veg",
+    type: "Veg",
     description: "Main paneer dish with fresh vegetables.",
     ingredients: [
       { name: "Paneer", quantity: "250g" },
@@ -291,7 +291,7 @@ const dishes = [
     id: 20,
     name: "Kadhai Paneer 20",
     mealType: "SIDES",
-    type: "Non Veg",
+    type: "Veg",
     description: "Paneer side dish with bold flavors.",
     ingredients: [
       { name: "Paneer", quantity: "220g" },
@@ -306,7 +306,7 @@ const dishes = [
     id: 21,
     name: "Kadhai Paneer 21",
     mealType: "STARTER",
-    type: "Veg",
+    type: "Non Veg",
     description: "Fresh paneer starter with vegetables.",
     ingredients: [
       { name: "Paneer", quantity: "200g" },
@@ -336,7 +336,7 @@ const dishes = [
     id: 23,
     name: "Kadhai Paneer 23",
     mealType: "DESSERT",
-    type: "Veg",
+    type: "Non Veg",
     description: "Paneer dessert with mild spices and sweetness.",
     ingredients: [
       { name: "Paneer", quantity: "200g" },
@@ -381,7 +381,7 @@ const dishes = [
     id: 26,
     name: "Kadhai Paneer 26",
     mealType: "MAIN COURSE",
-    type: "Non Veg",
+    type: "Veg",
     description: "Main course paneer dish with special kadhai masala.",
     ingredients: [
       { name: "Paneer", quantity: "250g" },
@@ -411,7 +411,7 @@ const dishes = [
     id: 28,
     name: "Kadhai Paneer 28",
     mealType: "SIDES",
-    type: "Non Veg",
+    type: "Veg",
     description: "Side dish of paneer with bold flavors.",
     ingredients: [
       { name: "Paneer", quantity: "220g" },
@@ -426,7 +426,7 @@ const dishes = [
     id: 29,
     name: "Kadhai Paneer 29",
     mealType: "STARTER",
-    type: "Veg",
+    type: "Non Veg",
     description: "Starter paneer dish with aromatic spices.",
     ingredients: [
       { name: "Paneer", quantity: "200g" },

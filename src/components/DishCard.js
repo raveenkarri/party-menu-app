@@ -13,6 +13,7 @@ export default function DishCard({
     <div className="dish-card">
       <img src={dish.image} alt={dish.name} className="dish-img" />
       <h3>{dish.name}</h3>
+      <p>{dish.type}</p>
       <p>{dish.description}</p>
       <div className="dish-actions">
         {isSelected ? (

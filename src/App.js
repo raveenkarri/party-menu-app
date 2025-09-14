@@ -24,11 +24,11 @@ function App() {
   }
 
   if (vegOnly && !nonVegOnly) {
-    filteredDishes = filteredDishes.filter((d) => d.type === "VEG");
+    filteredDishes = filteredDishes.filter((d) => d.type === "Veg");
   }
 
   if (nonVegOnly && !vegOnly) {
-    filteredDishes = filteredDishes.filter((d) => d.type === "NON-VEG");
+    filteredDishes = filteredDishes.filter((d) => d.type === "Non Veg");
   }
 
   // Add/Remove handlers
