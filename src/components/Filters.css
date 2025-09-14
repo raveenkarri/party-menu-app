@@ -1,0 +1,96 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 0 10px;
+}
+
+/* Tabs row */
+.tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto; /* allow horizontal scroll if needed */
+  scrollbar-width: none; /* hide scrollbar for Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+  display: none; /* hide scrollbar for Chrome/Safari */
+}
+
+.tab-btn {
+  flex-shrink: 0;         /* don't wrap, shrink instead */
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  white-space: nowrap;     /* keep text in one line */
+}
+
+.tab-btn.active {
+  background: #dc5907;
+  color: white;
+  border-color: #dc5907;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 100px;        /* never collapse too small */
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.toggles {
+  display: flex;
+  gap: 10px;
+}
+
+/* -------- Responsive -------- */
+
+/* Tablet ≥ 600px */
+@media (min-width: 600px) {
+  .filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tabs {
+    flex: 2;
+    gap: 10px;
+  }
+
+  .tab-btn {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+
+  .search-bar {
+    flex: 1;
+    max-width: 200px;
+    font-size: 14px;
+  }
+
+  .toggles {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+/* Desktop ≥ 900px */
+@media (min-width: 900px) {
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+
+  .search-bar {
+    max-width: 250px;
+    font-size: 15px;
+    padding: 10px;
+  }
+}

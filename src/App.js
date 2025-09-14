@@ -1,23 +1,86 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, { useState } from "react";
+import dishes  from "./data/mockDishes";
+import Filters from "./components/Filters";
+import DishList from "./components/DishList";
+import IngredientModal from "./components/IngredientModal";
+import "./App.css";
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState("STARTER");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [vegOnly, setVegOnly] = useState(false);
+  const [nonVegOnly, setNonVegOnly] = useState(false);
+  const [selectedDishes, setSelectedDishes] = useState([]);
+  const [modalDish, setModalDish] = useState(null);
+
+  // Filtering Logic
+  let filteredDishes = dishes.filter((d) => d.mealType.toLowerCase() === selectedCategory.toLowerCase());
+
+  if (searchTerm) {
+    filteredDishes = filteredDishes.filter((d) =>
+      d.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+
+  if (vegOnly && !nonVegOnly) {
+    filteredDishes = filteredDishes.filter((d) => d.type === "VEG");
+  }
+
+  if (nonVegOnly && !vegOnly) {
+    filteredDishes = filteredDishes.filter((d) => d.type === "NON-VEG");
+  }
+
+  // Add/Remove handlers
+  const addDish = (id) => setSelectedDishes([...selectedDishes, id]);
+  const removeDish = (id) =>
+    setSelectedDishes(selectedDishes.filter((dishId) => dishId !== id));
+
+  // Count selected per category
+  const categoryCounts = dishes.reduce((acc, d) => {
+    if (selectedDishes.includes(d.id)) {
+      acc[d.mealType] = (acc[d.mealType] || 0) + 1;
+    }
+    return acc;
+  }, {});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="app-container">
+
+      <Filters
+        activeCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        vegOnly={vegOnly}
+        nonVegOnly={nonVegOnly}
+        onVegOnlyChange={setVegOnly}
+        onNonVegOnlyChange={setNonVegOnly}
+      />
+
+      <DishList
+        dishes={filteredDishes}
+        selectedDishes={selectedDishes}
+        onAddDish={addDish}
+        onRemoveDish={removeDish}
+        onViewIngredients={setModalDish}
+      />
+
+      <IngredientModal dish={modalDish} onClose={() => setModalDish(null)} />
+
+     
+      <div className="summary">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Selected:{" "}
+          {Object.entries(categoryCounts).map(([cat, count]) => (
+            <span key={cat}>
+              {cat}: {count} &nbsp;
+            </span>
+          ))}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>Total: {selectedDishes.length}</p>
+        <button className="continue-btn">Continue</button>
+      </div>
     </div>
   );
 }
