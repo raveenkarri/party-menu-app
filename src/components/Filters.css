@@ -6,7 +6,7 @@
 
 
 .tabs {
-   display: flex;
+  display: flex;
   flex-direction: row;
   width: 100%;
   margin-bottom: 0.5rem;
@@ -18,9 +18,9 @@
   width: 22%;              
   margin: 0.5%;
   padding: 0.5rem 0;
-  font-size: 0.75rem;      
+  font-size: 0.65rem;      
   border: 1px solid #ccc;
-  border-radius: 0.4rem;
+  border-radius: 0.7rem;
   background: white;
   cursor: pointer;
   text-align: center;
@@ -45,10 +45,11 @@
 }
 
 .toggles {
-  width: 38%;              
+  width: 100%;              
   display: inline-block;
   text-align: right;
   font-size: 0.75rem;
+  font-weight: bold;
 }
 
 /* -------- Responsive -------- */

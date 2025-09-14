@@ -47,7 +47,7 @@ export default function Filters({
             checked={vegOnly}
             onChange={() => onVegOnlyChange(!vegOnly)}
           />
-          Veg Only
+          Veg
         </label>
         <label>
           <input
@@ -55,7 +55,7 @@ export default function Filters({
             checked={nonVegOnly}
             onChange={() => onNonVegOnlyChange(!nonVegOnly)}
           />
-          Non-Veg Only
+          Non-Veg
         </label>
       </div>
     </div>
