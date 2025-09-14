@@ -1,4 +1,4 @@
-// src/components/DishCard.js
+
 import React from "react";
 import "./DishCard.css";
 

@@ -1,4 +1,4 @@
-// src/components/DishList.js
+
 import React from "react";
 import DishCard from "./DishCard";
 import "./DishList.css";

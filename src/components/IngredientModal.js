@@ -1,4 +1,4 @@
-// src/components/IngredientModal.js
+
 import React from "react";
 import "./IngredientModal.css";
 
