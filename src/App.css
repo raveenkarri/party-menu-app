@@ -9,15 +9,21 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
+  padding-bottom: 80px;
 }
 
 .summary {
-  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;   
   padding: 15px;
   background: white;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0; 
   text-align: center;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
+
 
 .continue-btn {
   background: #007bff;
